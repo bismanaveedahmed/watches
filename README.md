@@ -2,11 +2,9 @@
 
 A responsive e-commerce frontend for a luxury watch store, built with HTML, CSS and JavaScript.
 
-**Live demo:** https://bismanaveedahmed.github.io/luxury-watch-store/
+**Live demo:** https://bismanaveedahmed.github.io/watches/
 
 <img width="1900" height="951" alt="image" src="https://github.com/user-attachments/assets/b1a12db4-5c3c-47ba-badb-7f61fb43f540" />
-
-
 ## Features
 
 - **Hero banner** – featured collection with a call-to-action
@@ -27,8 +25,8 @@ A responsive e-commerce frontend for a luxury watch store, built with HTML, CSS 
 ## Run Locally
 
 ```bash
-git clone https://github.com/bismanaveedahmed/luxury-watch-store.git
-cd luxury-watch-store
+git clone https://github.com/bismanaveedahmed/watches.git
+cd watches
 ```
 
 Then open `index.html` in your browser. No build step or dependencies required.
@@ -56,4 +54,4 @@ This is a student portfolio project for learning purposes only. It is not affili
 
 **Bisma Naveed Ahmed**
 - GitHub: [@bismanaveedahmed](https://github.com/bismanaveedahmed)
-- LinkedIn: [bisma-naveed-ahmed](https://www.linkedin.com/in/bisma-naveed-ahmed-431742318)
+- LinkedIn: [bismanaveedahmed](https://www.linkedin.com/in/bismanaveedahmed)
