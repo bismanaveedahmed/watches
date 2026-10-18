@@ -1,0 +1,383 @@
+/* Shared styles for every page: colors, fonts, top bar, header,
+   product cards, guarantee banner, newsletter, follow block, footer. */
+
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --color-bg: rgb(242, 242, 242);
+  --color-surface: rgb(219, 215, 215);
+  --color-chip: rgb(236, 254, 254);
+  --color-gold: goldenrod;
+  --color-dark-btn: rgb(47, 45, 45);
+  --color-shadow: rgb(160, 158, 158);
+  --color-price: rgb(185, 18, 18);
+  --color-cart-btn: rgb(245, 217, 55);
+  --color-form-btn: rgb(246, 201, 88);
+  --color-google: rgb(227, 32, 32);
+  --color-google-hover: rgb(255, 41, 41);
+  --color-instagram: rgb(229, 61, 117);
+  --color-whatsapp: green;
+  --color-youtube: red;
+
+  --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-heading: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  --container: 1200px;
+  --gutter: 16px;
+  --section-gap: 48px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+i:hover {
+  transform: scale(1.6);
+  transition: transform 0.3s ease;
+}
+
+/* ---------- Top bar ---------- */
+.pk {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 20px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 10px 20px;
+  font-size: 15px;
+}
+
+.pk-help {
+  font-size: large;
+}
+
+.pk1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.pk1 a {
+  color: var(--color-white);
+}
+
+.social a + a {
+  margin-left: 14px;
+}
+
+.icon-instagram { color: var(--color-instagram); }
+.icon-google { color: var(--color-white); }
+.icon-whatsapp { color: var(--color-whatsapp); }
+.icon-youtube { color: var(--color-youtube); }
+
+/* ---------- Header / main nav ---------- */
+.pk2 {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-surface);
+  padding: 30px;
+  font-size: 19px;
+}
+
+.side1,
+.side2 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.side1 a,
+.side2 a {
+  color: var(--color-black);
+}
+
+.side1 a.active {
+  color: var(--color-gold);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* ---------- Product cards (category pages) ---------- */
+.card0 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: var(--container);
+  margin: var(--section-gap) auto;
+  padding: 0 var(--gutter);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-surface);
+  border-radius: 10px;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.card1 {
+  font-size: 20px;
+  color: var(--color-gold);
+  text-align: center;
+}
+
+.card2 {
+  padding: 0 6%;
+  font-size: 15px;
+}
+
+.card3 {
+  margin-top: 15px;
+  color: var(--color-price);
+  font-size: 18px;
+  text-align: center;
+}
+
+.card button {
+  align-self: center;
+  margin: auto 0 16px;
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: var(--color-cart-btn);
+}
+
+.card button:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border: solid 2px var(--color-white);
+}
+
+/* ---------- Guarantee banner ---------- */
+.guarantee {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: var(--section-gap);
+}
+
+/* ---------- Newsletter ---------- */
+.sign {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: left center;
+}
+
+.sign1 {
+  position: absolute;
+  top: 50%;
+  right: 6%;
+  transform: translateY(-50%);
+  color: var(--color-white);
+  font-size: large;
+}
+
+.sign1 h2 {
+  font-size: 2em;
+  margin: 0 0 20px;
+}
+
+.sign1 h2 b {
+  color: var(--color-gold);
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.work {
+  width: 280px;
+  max-width: 100%;
+  font-size: 17px;
+  padding: 10px;
+  border-radius: 20px;
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+
+.sign1 button {
+  margin-left: 30px;
+  background-color: var(--color-gold);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 15px;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px gray;
+}
+
+.sign1 button:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* ---------- Follow us ---------- */
+.Follow {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  text-align: center;
+  font-size: large;
+  padding: 10px var(--gutter) 50px;
+}
+
+.Follow a {
+  color: var(--color-white);
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  text-align: center;
+  padding: 12px var(--gutter) 24px;
+  border-top: 1px solid #333;
+}
+
+.footer a {
+  color: var(--color-white);
+}
+
+.disclaimer {
+  font-size: 13px;
+  color: #bbb;
+  margin-bottom: 0;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .card0 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .pk {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .pk1 {
+    justify-content: center;
+    gap: 8px 16px;
+  }
+
+  .pk2 {
+    flex-wrap: wrap;
+    padding: 16px 20px;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .side1 {
+    display: none;
+    order: 3;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding-top: 16px;
+  }
+
+  .side1.open {
+    display: flex;
+  }
+
+  .side2 {
+    gap: 14px;
+    font-size: 16px;
+  }
+
+  .sign1 {
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 2 * var(--gutter));
+    max-width: 380px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.65);
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .sign1 h2 {
+    font-size: 1.6em;
+  }
+
+  .field {
+    justify-content: center;
+  }
+
+  .sign1 button {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .card0 {
+    grid-template-columns: 1fr;
+  }
+
+  .wishlist-label {
+    display: none; /* keep the heart icon, drop the text */
+  }
+}

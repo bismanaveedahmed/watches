@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Register | Royal Wrist</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+.box{
+  border: 2px solid rgb(186, 185, 185);
+  background-color: rgb(197, 195, 195);
+  width: calc(100% - 2 * var(--gutter));
+  max-width: var(--container);
+  margin: var(--section-gap) auto;
+  padding: 24px;
+}
+.login{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.login span{
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: var(--color-google);
+    color: var(--color-white);
+}
+.login span:hover{
+    background-color: var(--color-google-hover);
+}
+.track3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+.track3 label{
+    display: inline-block;
+    margin-bottom: 6px;
+}
+.label-title{
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0 0 16px;
+}
+.label-field{
+    font-size: 15px;
+}
+.track3 input{
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 16px;
+    box-shadow: 2px 2px 4px gray;
+    font-size: 15px;
+}
+.box button{
+    display: block;
+    padding: 5px 15px;
+    margin: 8px 0;
+    background-color: var(--color-form-btn);
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--color-white);
+    border: 2px solid var(--color-form-btn);
+}
+@media (max-width: 768px){
+    .track3{
+        grid-template-columns: 1fr;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="pk">
+    <span class="pk-help"><i class="fa-solid fa-user"></i> Need Help</span>
+    <nav class="pk1" aria-label="Account">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="track-order.html">Track Your Order</a>
+      <a href="login.html">Login/Register</a>
+    </nav>
+    <div class="social">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram icon-instagram"></i></a>
+      <a href="#" aria-label="Google"><i class="fab fa-google icon-google"></i></a>
+      <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp icon-whatsapp"></i></a>
+      <a href="#" aria-label="YouTube"><i class="fab fa-youtube icon-youtube"></i></a>
+    </div>
+  </div>
+
+<div class="box">
+      <div class="login">
+        <span><b>G+ LOGIN WITH GOOGLE</b></span>
+      </div>
+
+      <div class="track3">
+       <div class="id1">
+         <h2 class="label-title">LOGIN</h2>
+         <label class="label-field" for="login-user"><b>Username or email address*</b></label>
+         <input type="email" id="login-user">
+         <label class="label-field" for="login-pass"><b>Password*</b></label>
+         <input type="password" id="login-pass">
+         <button>LOGIN</button>
+         <p class="label-field"><b>Lost your password?</b></p>
+        </div>
+        <div class="id2">
+         <h2 class="label-title">REGISTER</h2>
+         <label class="label-field" for="reg-user"><b>Username*</b></label>
+         <input type="text" id="reg-user">
+         <label class="label-field" for="reg-email"><b>Email address*</b></label>
+         <input type="email" id="reg-email">
+         <label class="label-field" for="reg-pass"><b>Password*</b></label>
+         <input type="password" id="reg-pass">
+         <p class="label-field"><b>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our privacy policy.</b></p>
+         <button>REGISTER</button>
+        </div>
+      </div>
+</div>
+
+<footer class="footer">
+    <p>© <span id="year">2026</span> Royal Wrist. All Rights Reserved.</p>
+    <a href="#privacy-policy">Privacy Policy</a>
+    <p class="disclaimer">Student portfolio project, not affiliated with any brand shown.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

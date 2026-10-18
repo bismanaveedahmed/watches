@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Wrist | Luxury Watches</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+.hero {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Category cards */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  max-width: var(--container);
+  margin: var(--section-gap) auto 0;
+  padding: 0 var(--gutter);
+}
+
+.category-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-chip);
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px var(--color-shadow);
+  font-size: 16px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.category-card img {
+  flex: 0 0 45%;
+  width: 45%;
+  max-width: 100px;
+  aspect-ratio: 10 / 7;
+  object-fit: cover;
+}
+
+.category-card img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* Section headings with a line on each side */
+.section-title {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: var(--section-gap) 0 0;
+  font-size: 40px;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgb(38, 37, 37);
+}
+
+.section-title::before,
+.section-title::after {
+  flex: 1;
+  content: "";
+  border-bottom: 2px solid gray;
+  margin: 0 20px;
+}
+
+.tagline {
+  text-align: center;
+  font-size: 20px;
+  margin: 20px var(--gutter) 0;
+}
+
+/* Brands */
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 20px;
+  max-width: var(--container);
+  margin: 32px auto 0;
+  padding: 0 var(--gutter);
+}
+
+.brand-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.brand-grid img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* Dark centered buttons */
+.btn-row {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.btn-dark {
+  display: inline-block;
+  background-color: var(--color-dark-btn);
+  color: var(--color-white);
+  font-size: 15px;
+  padding: 15px 70px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px gray;
+}
+
+/* Men / Women banners */
+.banner-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: var(--container);
+  margin: 30px auto 0;
+  padding: 0 var(--gutter);
+}
+
+.banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.banner img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1124 / 663;
+  object-fit: cover;
+}
+
+.banner img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.banner-btn {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 90px;
+  font-size: large;
+  color: var(--color-black);
+  background-color: rgb(240, 240, 240);
+  border: 2px solid transparent;
+}
+
+.banner-btn:hover {
+  background-color: var(--color-black);
+  color: var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+@media (max-width: 1024px) {
+  .category-grid { grid-template-columns: repeat(3, 1fr); }
+  .brand-grid { grid-template-columns: repeat(5, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .brand-grid { grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .section-title { font-size: 28px; }
+  .section-title::before,
+  .section-title::after { margin: 0 12px; }
+  .banner-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 520px) {
+  .category-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .category-card { font-size: 14px; }
+  .brand-grid { grid-template-columns: repeat(3, 1fr); }
+  .tagline { font-size: 17px; }
+  .btn-dark { padding: 15px 40px; }
+  .banner-btn { padding: 12px 50px; }
+}
+    </style>
+</head>
+<body>
+  <div class="pk">
+    <span class="pk-help"><i class="fa-solid fa-user"></i> Need Help</span>
+    <nav class="pk1" aria-label="Account">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="track-order.html">Track Your Order</a>
+      <a href="login.html">Login/Register</a>
+    </nav>
+    <div class="social">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram icon-instagram"></i></a>
+      <a href="#" aria-label="Google"><i class="fab fa-google icon-google"></i></a>
+      <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp icon-whatsapp"></i></a>
+      <a href="#" aria-label="YouTube"><i class="fab fa-youtube icon-youtube"></i></a>
+    </div>
+  </div>
+
+  <header class="pk2">
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="main-nav"><i class="fa-solid fa-bars"></i></button>
+    <nav class="side1" id="main-nav" aria-label="Main">
+      <a class="active" href="index.html">Home</a>
+      <a href="women.html">Women</a>
+      <a href="men.html">Men</a>
+      <a href="kids.html">Kids</a>
+      <a href="perfumes.html">Perfumes</a>
+    </nav>
+    <div class="side2">
+      <i class="fa-solid fa-search"></i>
+      <a class="wishlist-label" href="#">WISHLIST</a>
+      <i class="fa-solid fa-heart"></i>
+      <a href="#">Rs0</a>
+      <i class="fa-solid fa-bag-shopping"></i>
+    </div>
+  </header>
+
+  <img class="hero" src="assets/images/hero.jpg" alt="Couple holding hands, both wearing Emporio Armani watches: For wrists that own the moment">
+
+  <div class="category-grid">
+    <div class="category-card"><img src="assets/images/cat-men.webp" alt="Men's watch"><span>Men Watches</span></div>
+    <div class="category-card"><img src="assets/images/cat-women.webp" alt="Women's watch"><span>Women Watches</span></div>
+    <div class="category-card"><img src="assets/images/cat-automatic.webp" alt="Automatic watch"><span>Automatic Watches</span></div>
+    <div class="category-card"><img src="assets/images/cat-hot-selling.webp" alt="Hot-selling watch"><span>Hot Watches</span></div>
+    <div class="category-card"><img src="assets/images/cat-kids.webp" alt="Kids' watch"><span>Kids Watches</span></div>
+    <div class="category-card"><img src="assets/images/cat-new-arrival.webp" alt="New arrival watch"><span>New Arrival Watches</span></div>
+    <div class="category-card"><img src="assets/images/cat-brand-new.webp" alt="Brand new watch"><span>Brand New Watches</span></div>
+    <div class="category-card"><img src="assets/images/cat-like-new.webp" alt="Like new pre-owned watch"><span>Like New Watches</span></div>
+    <div class="category-card"><img src="assets/images/cat-luxury.webp" alt="Luxury watch"><span>Luxury Watches</span></div>
+    <div class="category-card"><img src="assets/images/cat-under-15000.webp" alt="Watch under Rs 15,000"><span>Under 15,000 Watches</span></div>
+    <div class="category-card"><img src="assets/images/cat-15000-to-25000.webp" alt="Watch between Rs 15,000 and 25,000"><span>15,000 To 25,000 Watches</span></div>
+    <div class="category-card"><img src="assets/images/cat-perfumes.webp" alt="Perfume bottle"><span>Perfumes</span></div>
+  </div>
+
+  <h2 class="section-title"><span>SHOP BY BRANDS</span></h2>
+
+  <div class="brand-grid">
+    <img src="assets/images/brand-emporio-armani.jpg" alt="Emporio Armani">
+    <img src="assets/images/brand-michael-kors.jpg" alt="Michael Kors">
+    <img src="assets/images/brand-hugo-boss.jpg" alt="Hugo Boss">
+    <img src="assets/images/brand-burberry.jpg" alt="Burberry">
+    <img src="assets/images/brand-tommy-hilfiger.jpg" alt="Tommy Hilfiger">
+    <img src="assets/images/brand-fossil.jpg" alt="Fossil">
+    <img src="assets/images/brand-citizen.jpg" alt="Citizen">
+    <img src="assets/images/brand-guess.jpg" alt="Guess">
+    <img src="assets/images/brand-gucci.jpg" alt="Gucci">
+    <img src="assets/images/brand-movado.jpg" alt="Movado">
+    <img src="assets/images/brand-tissot.jpg" alt="Tissot">
+    <img src="assets/images/brand-calvin-klein.jpg" alt="Calvin Klein">
+    <img src="assets/images/brand-tag-heuer.jpg" alt="Tag Heuer">
+    <img src="assets/images/brand-ferrari.jpg" alt="Ferrari">
+    <img src="assets/images/brand-diesel.jpg" alt="Diesel">
+    <img src="assets/images/brand-lacoste.jpg" alt="Lacoste">
+    <img src="assets/images/brand-coach.jpg" alt="Coach">
+    <img src="assets/images/brand-maserati.jpg" alt="Maserati">
+    <img src="assets/images/brand-just-cavalli.jpg" alt="Just Cavalli">
+    <img src="assets/images/brand-maurice-lacroix.jpg" alt="Maurice Lacroix">
+    <img src="assets/images/brand-swarovski.jpg" alt="Swarovski">
+  </div>
+
+  <div class="btn-row">
+    <a href="#" class="btn-dark">VIEW ALL BRANDS</a>
+  </div>
+
+  <h2 class="section-title"><span>SHOP BY CATEGORY</span></h2>
+  <p class="tagline">Elevate Your Style with a Specially Crafted Collection for Every Taste!</p>
+
+  <div class="banner-grid">
+    <div class="banner">
+      <img src="assets/images/banner-men.jpg" alt="Man wearing a wristwatch">
+      <a class="banner-btn" href="men.html">MEN</a>
+    </div>
+    <div class="banner">
+      <img src="assets/images/banner-women.jpg" alt="Woman wearing a pink watch">
+      <a class="banner-btn" href="women.html">WOMEN</a>
+    </div>
+  </div>
+
+  <div class="btn-row">
+    <a href="collection.html" class="btn-dark">VIEW ALL COLLECTION</a>
+  </div>
+  <img class="guarantee" src="assets/images/guarantee.jpg" alt="Our guarantee: 100% authenticity, 1 year warranty, fast delivery, best prices">
+
+  <section class="sign">
+    <img class="image" src="assets/images/newsletter.jpg" alt="Man wearing a classic watch with a white dial">
+    <div class="sign1">
+      <h2>SIGN UP FOR <br><b>NEWSLETTER</b></h2>
+      <label class="field"><i class="fa-solid fa-envelope"></i>
+        <input class="work" type="email" placeholder="Your Email" aria-label="Your email"></label>
+      <label class="field"><i class="fa-solid fa-circle-user"></i>
+        <input class="work" type="tel" placeholder="WhatsApp Number" aria-label="WhatsApp number"></label>
+      <button type="button">SIGN UP</button>
+    </div>
+  </section>
+
+
+  <section class="Follow">
+    <h3>Follow us on!</h3>
+    <div class="social">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Google"><i class="fab fa-google"></i></a>
+      <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <p>© <span id="year">2026</span> Royal Wrist. All Rights Reserved.</p>
+    <a href="#privacy-policy">Privacy Policy</a>
+    <p class="disclaimer">Student portfolio project, not affiliated with any brand shown.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

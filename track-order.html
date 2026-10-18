@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Order | Royal Wrist</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+.login{
+    text-align: center;
+    margin: var(--section-gap) var(--gutter) 32px;
+}
+.login span{
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: var(--color-google);
+    color: var(--color-white);
+}
+.login span:hover{
+    background-color: var(--color-google-hover);
+}
+.track1{
+    background-color: var(--color-surface);
+    width: calc(100% - 2 * var(--gutter));
+    max-width: var(--container);
+    margin: 0 auto var(--section-gap);
+    padding: 15px 20px;
+}
+.track3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+.track3 label{
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+.track3 input{
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    box-shadow: 2px 2px 4px gray;
+    font-size: 15px;
+}
+.track1 button{
+    padding: 5px 15px;
+    margin-top: 20px;
+    background-color: var(--color-form-btn);
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--color-white);
+    border: 2px solid var(--color-form-btn);
+}
+@media (max-width: 768px){
+    .track3{
+        grid-template-columns: 1fr;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="pk">
+    <span class="pk-help"><i class="fa-solid fa-user"></i> Need Help</span>
+    <nav class="pk1" aria-label="Account">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="track-order.html">Track Your Order</a>
+      <a href="login.html">Login/Register</a>
+    </nav>
+    <div class="social">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram icon-instagram"></i></a>
+      <a href="#" aria-label="Google"><i class="fab fa-google icon-google"></i></a>
+      <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp icon-whatsapp"></i></a>
+      <a href="#" aria-label="YouTube"><i class="fab fa-youtube icon-youtube"></i></a>
+    </div>
+  </div>
+
+      <div class="login">
+        <span><b>G+ LOGIN WITH GOOGLE</b></span>
+      </div>
+    <div class="track1">
+        <p class="track2"><b>To track your order, please enter your Order ID in the box below and press the "Track" button.
+            This was given to you on your receipt and in the confirmation email you should have received.</b></p>
+      <div class="track3">
+        <div class="id1">
+          <label for="order-id"><b>Order ID</b></label>
+          <input type="text" id="order-id" placeholder="Found in your order confirmation email">
+        </div>
+        <div class="id2">
+          <label for="billing-email"><b>Billing email</b></label>
+          <input type="email" id="billing-email" placeholder="Email you used during checkout">
+        </div>
+      </div>
+
+      <button>TRACK</button>
+    </div>
+
+<img class="guarantee" src="assets/images/guarantee.jpg" alt="Our guarantee: 100% authenticity, 1 year warranty, fast delivery, best prices">
+    
+   <section class="sign">
+    <img class="image" src="assets/images/newsletter.jpg" alt="Man wearing a classic watch with a white dial">
+    <div class="sign1">
+      <h2>SIGN UP FOR <br><b>NEWSLETTER</b></h2>
+      <label class="field"><i class="fa-solid fa-envelope"></i>
+        <input class="work" type="email" placeholder="Your Email" aria-label="Your email"></label>
+      <label class="field"><i class="fa-solid fa-circle-user"></i>
+        <input class="work" type="tel" placeholder="WhatsApp Number" aria-label="WhatsApp number"></label>
+      <button type="button">SIGN UP</button>
+    </div>
+  </section>
+
+<section class="Follow">
+    <h3>Follow us on!</h3>
+    <div class="social">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Google"><i class="fab fa-google"></i></a>
+      <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+  </section>
+
+<footer class="footer">
+    <p>© <span id="year">2026</span> Royal Wrist. All Rights Reserved.</p>
+    <a href="#privacy-policy">Privacy Policy</a>
+    <p class="disclaimer">Student portfolio project, not affiliated with any brand shown.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
